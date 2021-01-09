@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+.body {
+  background-image: url("./assets/ruhail-pic.JPG");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+  height: 84vh;
+  margin-right: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 8px 0 8px;
+}
+.title-name {
+  font-family: "Open Sans", sans-serif;
+  color: #000;
+  letter-spacing: 1px;
+  padding-left: 4px;
+  padding-right: 54px;
+  cursor: pointer;
+}
+
+.info-heading {
+  padding-right: 4px;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+}
+
+.work-heading {
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  padding-right: 34px;
+}
+
+.info-heading:hover {
+  color: grey;
+}
+
+.work-heading:hover {
+  color: grey;
+}
+
+.work-section {
+  display: none;
+}
+
+.about-section {
+  font-family: "Open Sans", sans-serif;
+  display: none;
+  margin: 50px 80px 0px 70px;
+}
+
+.press-links {
+  display: block;
+  margin-top: 60px;
+}
+
+.press-links h4 {
+  text-align: center;
+  cursor: pointer;
+}
+
+.press-links h4 a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.about-section-heading {
+  display: flex;
+  justify-content: flex-start;
+}
+
+footer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: start;
+}
+
+.soundcloud {
+  background-color: #ff7f34;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+#sound-cloud {
+  color: white;
+  size: 20px;
+}
+
+.bandcamp {
+  width: 23px;
+  display: flex;
+  justify-content: center;
+  color: #629aa9;
+  margin-right: 15px;
+}
+
+.instagram {
+  width: 23px;
+  display: flex;
+  justify-content: center;
+}
+#insta {
+  color: transparent;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  background: -webkit-radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+@media screen and (max-width: 700px) {
+  .body {
+    background-position: center center;
+  }
+}
