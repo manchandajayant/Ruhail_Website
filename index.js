@@ -168,7 +168,7 @@ function mouseOverImage(id) {
     element.style.color = "#fff";
   });
   if (id === "meetings") {
-    document.body.style.backgroundImage = "url(./assets/01.png)";
+    document.body.style.backgroundImage = "url(./assets/16.png)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
