@@ -141,12 +141,17 @@ footer {
   size: 20px;
 }
 
-.bandcamp a i {
+#anchor-link {
+  color: transparent !important;
+}
+
+.bandcamp i {
   width: 23px;
   display: flex;
   justify-content: center;
   color: #629aa9;
   margin-right: 15px;
+  text-decoration: none;
 }
 
 .instagram {
