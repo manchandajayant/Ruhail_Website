@@ -4,13 +4,14 @@ window.onload = function () {
     "/assets/ruhail-pic.JPG",
     "/assets/3rd.jpg",
   ];
-  var selectImage = document.getElementById("images");
 
   setInterval(changeImage, 10000);
+  var selectImage = document.getElementsByTagName("img")[0];
 
   function changeImage() {
     var i = Math.floor(Math.random() * 3);
-    selectImage.style.backgroundImage = "url('" + images[i] + "')";
+    selectImage.setAttribute("src", images[i]);
+    i >= 13 ? (i = 1) : (i = i + 1);
   }
 };
 
@@ -99,7 +100,7 @@ function workActive() {
     "./assets/14.png",
   ];
 
-  const imageSrc = document.getElementsByTagName("img")[0];
+  const imageSrc = document.getElementsByTagName("img")[1];
 
   setInterval(changeImageForMeetings, 9000);
   var i = 1;

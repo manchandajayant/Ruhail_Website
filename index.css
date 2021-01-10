@@ -1,12 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
-.body {
-  background-image: url("./assets/ruhail-pic.JPG");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #464646;
-  height: 84vh;
-  margin-right: 0;
+
+.body img {
+  height: 98vh;
+  width: 99vw;
 }
 
 .nav {
