@@ -141,7 +141,7 @@ footer {
   size: 20px;
 }
 
-.bandcamp {
+.bandcamp a i {
   width: 23px;
   display: flex;
   justify-content: center;
@@ -266,6 +266,14 @@ footer {
   display: block;
   text-align: center;
   font-family: "Open Sans", sans-serif;
+}
+
+.cuon-img-container {
+  margin: 10px 70px 0px 70px;
+}
+.cuon-img {
+  width: 100%;
+  height: auto;
 }
 
 @media screen and (max-width: 700px) {

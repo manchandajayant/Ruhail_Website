@@ -1,21 +1,4 @@
 var running = true;
-window.onload = function () {
-  var images = [
-    "/assets/main-page.jpg",
-    "/assets/ruhail-pic.JPG",
-    "/assets/3rd.jpg",
-  ];
-
-  setInterval(changeImage, 7000);
-
-  function changeImage() {
-    if (running) {
-      var i = Math.floor(Math.random() * 3);
-      document.body.style.backgroundImage = `url(${images[i]})`;
-    }
-  }
-};
-
 var m = document.getElementById("meetings-work");
 var h = document.getElementById("hack-lab-work");
 var p = document.getElementById("pamir-work");
@@ -35,13 +18,30 @@ var cvContainer = document.getElementById("cv");
 
 var anchorTags = document.getElementsByTagName("a");
 var h3Tags = document.getElementsByTagName("h3");
-
 var arrForh3 = Array.from(h3Tags);
+var arr = Array.from(anchorTags);
+
+window.onload = function () {
+  var images = [
+    "/assets/main-page.jpg",
+    "/assets/ruhail-pic.JPG",
+    "/assets/3rd.jpg",
+  ];
+
+  setInterval(changeImage, 7000);
+
+  function changeImage() {
+    if (running) {
+      var i = Math.floor(Math.random() * 3);
+      document.body.style.backgroundImage = `url(${images[i]})`;
+    }
+  }
+};
+
 arrForh3.map((element) => {
   element.style.fontWeight = "900";
 });
 
-const arr = Array.from(anchorTags);
 arr.map((element) => {
   element.setAttribute("target", "_blank");
   element.style.color = "#000";
@@ -156,7 +156,7 @@ function imagesForMeeting() {
     element.style.width = "100%";
     element.style.height = "auto";
     element.style.display = "block";
-    divForImages.style.margin = "60px";
+    divForImages.style.margin = "0 60px 0 60px";
     divForImages.style.padding = "40px";
     divForImages.appendChild(element);
     m.appendChild(divForImages);
@@ -274,7 +274,7 @@ function clickWork(id) {
     c.style.display = "none";
     t.style.display = "block";
     i.style.display = "none";
-  } else if (id === "italam") {
+  } else if (id === "ltalam") {
     workSection.style.display = "none";
     m.style.display = "none";
     h.style.display = "none";
