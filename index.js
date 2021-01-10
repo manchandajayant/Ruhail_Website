@@ -36,7 +36,8 @@ arrForh3.map((element) => {
 const arr = Array.from(anchorTags);
 arr.map((element) => {
   element.setAttribute("target", "_blank");
-  element.style.color = "#663600";
+  element.style.color = "#000";
+  element.style.fontWeight = "900";
 });
 
 function collapse(id) {
@@ -102,10 +103,60 @@ function workActive() {
 
   const imageSrc = document.getElementsByTagName("img")[2];
 
-  setInterval(changeImageForMeetings, 9000);
+  //setInterval(changeImageForMeetings, 9000);
   var i = 1;
-  function changeImageForMeetings() {
-    imageSrc.setAttribute("src", imagesForMeetings[i]);
-    i >= 13 ? (i = 1) : (i = i + 1);
+  // function changeImageForMeetings() {
+  //   imageSrc.setAttribute("src", imagesForMeetings[i]);
+  //   i >= 13 ? (i = 1) : (i = i + 1);
+  // }
+}
+
+function mouseOverImage(id) {
+  const work = document.getElementsByClassName("links-to-work");
+  console.log(work);
+  const arr = Array.from(work);
+  arr.forEach((element) => {
+    element.style.color = "#fff";
+  });
+  if (id === "meetings") {
+    document.body.style.backgroundImage = "url(./assets/01.png)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundSize = "cover";
+  } else if (id === "hacklab") {
+    document.body.style.backgroundImage = "url(./assets/ctm.jpg)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundSize = "cover";
+  } else if (id === "pamir") {
+    document.body.style.backgroundImage = "url(./assets/pamir1.jpg)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundSize = "cover";
+  } else if (id === "cuon") {
+    document.body.style.backgroundImage = "url(./assets/cuon.jpg)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundSize = "cover";
+  } else if (id === "tongue") {
+    document.body.style.backgroundImage = "url(./assets/tongue.jpg)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundSize = "cover";
+  } else if ("ltalam") {
+    document.body.style.backgroundImage = "url(./assets/ltalam.jpg)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundSize = "cover";
   }
+}
+
+function mouseOut() {
+  document.body.style.backgroundImage = "none";
+  const work = document.getElementsByClassName("links-to-work");
+  console.log(work);
+  const arr = Array.from(work);
+  arr.forEach((element) => {
+    element.style.color = "#000";
+  });
 }

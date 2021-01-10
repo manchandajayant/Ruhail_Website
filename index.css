@@ -194,67 +194,11 @@ footer {
   margin: 0 30px 0 26px;
 }
 
-.musicmakers-content {
-  display: flex;
-  justify-content: space-evenly;
-  font-family: "Open Sans", sans-serif;
-}
-
-.musicmakers-content img {
-  width: 600px;
-  height: 400px;
-}
-
-.meetings-content {
-  display: flex;
-  justify-content: space-evenly;
-  font-family: "Open Sans", sans-serif;
-}
-
-.meetings-content img {
-  width: 600px;
-  height: 400px;
-}
-
-.hounds-of-pamir-content {
-  display: flex;
-  justify-content: space-evenly;
-  font-family: "Open Sans", sans-serif;
-}
-
-.hounds-of-pamir-content img {
-  width: 600px;
-  height: 400px;
-}
-
-.cuon-content {
-  display: flex;
-  justify-content: space-evenly;
-  font-family: "Open Sans", sans-serif;
-}
-
-.cuon-content img {
-  width: 600px;
-  height: 400px;
-}
-
-.tongue-content {
-  display: flex;
-  justify-content: space-evenly;
-  font-family: "Open Sans", sans-serif;
-}
-.tongue-content img {
-  width: 600px;
-  height: 400px;
-}
-.ltalam-content {
-  display: flex;
-  justify-content: space-evenly;
-  font-family: "Open Sans", sans-serif;
-}
-.ltalam-content img {
-  width: 600px;
-  height: 400px;
+.work-section a {
+  display: block;
+  margin: 70px;
+  text-align: center;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 700px) {
