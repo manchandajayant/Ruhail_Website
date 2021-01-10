@@ -100,7 +100,7 @@ function workActive() {
     "./assets/14.png",
   ];
 
-  const imageSrc = document.getElementsByTagName("img")[1];
+  const imageSrc = document.getElementsByTagName("img")[2];
 
   setInterval(changeImageForMeetings, 9000);
   var i = 1;
