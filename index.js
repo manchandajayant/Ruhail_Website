@@ -4,7 +4,7 @@ var h = document.getElementById("hack-lab-work");
 var p = document.getElementById("pamir-work");
 var c = document.getElementById("cuon-work");
 var t = document.getElementById("tongue-work");
-var i = document.getElementById("ltalam-work");
+var l = document.getElementById("ltalam-work");
 
 var homePage = document.getElementById("images");
 var workPage = document.getElementById("work-section");
@@ -67,7 +67,7 @@ function collapse(id) {
     p.style.display = "none";
     c.style.display = "none";
     t.style.display = "none";
-    i.style.display = "none";
+    l.style.display = "none";
   } else if (id === "info") {
     running = false;
     document.body.style.backgroundImage = "none";
@@ -83,7 +83,7 @@ function collapse(id) {
     p.style.display = "none";
     c.style.display = "none";
     t.style.display = "none";
-    i.style.display = "none";
+    l.style.display = "none";
   } else if (id === "home") {
     document.body.style.backgroundImage = "url(/assets/ruhail-pic.JPG)";
     running = true;
@@ -98,7 +98,7 @@ function collapse(id) {
     p.style.display = "none";
     c.style.display = "none";
     t.style.display = "none";
-    i.style.display = "none";
+    l.style.display = "none";
   }
 }
 
@@ -164,10 +164,54 @@ function imagesForMeeting() {
 
   var myIndex = 0;
   carousel();
-  console.log(element);
+
   function carousel() {
     var i;
     var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {
+      myIndex = 1;
+    }
+    x[myIndex - 1].style.display = "block";
+    setTimeout(carousel, 3000);
+  }
+}
+
+function imagesForLtalam() {
+  var images = [
+    "./assets/ltalam.jpg",
+    "./assets/ltalam2.png",
+    "./assets/ltalam3.png",
+    "./assets/ltalam5.png",
+    "./assets/ltalam5.png",
+  ];
+
+  var elementImage, divForImagesinLtalam;
+  divForImagesinLtalam = document.createElement("div");
+
+  for (var i = 0; i < images.length; i++) {
+    elementImage = document.createElement("img");
+    elementImage.setAttribute("src", images[i]);
+    elementImage.setAttribute("class", "mySlidesInLtalam");
+    elementImage.style.width = "100%";
+    elementImage.style.height = "auto";
+    elementImage.style.display = "block";
+    divForImagesinLtalam.style.margin = "0 60px 0 60px";
+    divForImagesinLtalam.style.padding = "40px";
+    divForImagesinLtalam.appendChild(elementImage);
+
+    l.appendChild(divForImagesinLtalam);
+  }
+
+  var myIndex = 0;
+  carousel();
+  console.log(elementImage);
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlidesInLtalam");
     for (i = 0; i < x.length; i++) {
       x[i].style.display = "none";
     }
@@ -233,6 +277,7 @@ function mouseOut() {
 const workSection = document.getElementById("work-section");
 
 function clickWork(id) {
+  console.log(id);
   if (id === "meetings") {
     imagesForMeeting();
     workSection.style.display = "none";
@@ -241,7 +286,7 @@ function clickWork(id) {
     p.style.display = "none";
     c.style.display = "none";
     t.style.display = "none";
-    i.style.display = "none";
+    l.style.display = "none";
   } else if (id === "hacklab") {
     workSection.style.display = "none";
     m.style.display = "none";
@@ -249,7 +294,7 @@ function clickWork(id) {
     p.style.display = "none";
     c.style.display = "none";
     t.style.display = "none";
-    i.style.display = "none";
+    l.style.display = "none";
   } else if (id === "pamir") {
     workSection.style.display = "none";
     m.style.display = "none";
@@ -257,7 +302,7 @@ function clickWork(id) {
     p.style.display = "block";
     c.style.display = "none";
     t.style.display = "none";
-    i.style.display = "none";
+    l.style.display = "none";
   } else if (id === "cuon") {
     workSection.style.display = "none";
     m.style.display = "none";
@@ -265,7 +310,7 @@ function clickWork(id) {
     p.style.display = "none";
     c.style.display = "block";
     t.style.display = "none";
-    i.style.display = "none";
+    l.style.display = "none";
   } else if (id === "tongue") {
     workSection.style.display = "none";
     m.style.display = "none";
@@ -273,14 +318,15 @@ function clickWork(id) {
     p.style.display = "none";
     c.style.display = "none";
     t.style.display = "block";
-    i.style.display = "none";
+    l.style.display = "none";
   } else if (id === "ltalam") {
+    imagesForLtalam();
     workSection.style.display = "none";
     m.style.display = "none";
     h.style.display = "none";
     p.style.display = "none";
     c.style.display = "none";
     t.style.display = "none";
-    i.style.display = "block";
+    l.style.display = "block";
   }
 }
