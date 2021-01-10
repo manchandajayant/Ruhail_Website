@@ -143,6 +143,8 @@ function imagesForMeeting() {
     "./assets/12.png",
     "./assets/13.png",
     "./assets/14.png",
+    "./assets/15.png",
+    "./assests/16.png",
   ];
 
   var element, divForImages;

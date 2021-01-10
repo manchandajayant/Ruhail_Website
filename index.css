@@ -248,6 +248,26 @@ footer {
   font-family: "Open Sans", sans-serif;
 }
 
+.pamir-img {
+  width: 100%;
+  height: auto;
+}
+.pamir-image-container {
+  margin: 10px 60px 0px 60px;
+}
+
+.hckr {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.hckr-links {
+  display: block;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
 @media screen and (max-width: 700px) {
   .body img {
     height: 100%;
