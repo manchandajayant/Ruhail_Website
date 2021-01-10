@@ -1,3 +1,4 @@
+var running = true;
 window.onload = function () {
   var images = [
     "/assets/main-page.jpg",
@@ -5,13 +6,14 @@ window.onload = function () {
     "/assets/3rd.jpg",
   ];
 
-  setInterval(changeImage, 10000);
-  var selectImage = document.getElementsByTagName("img")[0];
+  setInterval(changeImage, 7000);
 
   function changeImage() {
-    var i = Math.floor(Math.random() * 3);
-    selectImage.setAttribute("src", images[i]);
-    i >= 13 ? (i = 1) : (i = i + 1);
+    if (running) {
+      var i = Math.floor(Math.random() * 3);
+      document.body.style.backgroundImage = `url(${images[i]})`;
+      console.log("runnig");
+    }
   }
 };
 
@@ -42,19 +44,37 @@ arr.map((element) => {
 
 function collapse(id) {
   console.log(id);
+  const pTags = document.getElementsByClassName("nav")[0].children;
+  const arr = Array.from(pTags);
+
   if (id === "work") {
+    running = false;
+    document.body.style.backgroundImage = "none";
     homePage.style.display = "none";
     workPage.style.display = "block";
     aboutPage.style.display = "none";
-    workActive();
+    arr.forEach((element) => {
+      element.style.color = "#000";
+    });
   } else if (id === "info") {
+    running = false;
+    document.body.style.backgroundImage = "none";
     aboutPage.style.display = "block";
     homePage.style.display = "none";
     workPage.style.display = "none";
+
+    arr.forEach((element) => {
+      element.style.color = "#000";
+    });
   } else if (id === "home") {
+    document.body.style.backgroundImage = "url(/assets/ruhail-pic.JPG)";
+    running = true;
     aboutPage.style.display = "none";
     homePage.style.display = "block";
     workPage.style.display = "none";
+    arr.forEach((element) => {
+      element.style.color = "#fff";
+    });
   }
 }
 
@@ -113,7 +133,7 @@ function workActive() {
 
 function mouseOverImage(id) {
   const work = document.getElementsByClassName("links-to-work");
-  console.log(work);
+
   const arr = Array.from(work);
   arr.forEach((element) => {
     element.style.color = "#fff";
@@ -154,7 +174,7 @@ function mouseOverImage(id) {
 function mouseOut() {
   document.body.style.backgroundImage = "none";
   const work = document.getElementsByClassName("links-to-work");
-  console.log(work);
+
   const arr = Array.from(work);
   arr.forEach((element) => {
     element.style.color = "#000";

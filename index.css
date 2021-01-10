@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 
+html {
+  height: 100%;
+}
+body {
+  background-image: url("./assets/ruhail-pic.JPG");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
 .body {
   display: flex;
   justify-content: center;
@@ -14,6 +24,10 @@
   display: flex;
   justify-content: space-between;
   margin: 0 8px 0 8px;
+}
+
+.nav p {
+  color: #fff;
 }
 .title-name {
   font-family: "Open Sans", sans-serif;
