@@ -145,18 +145,36 @@ function imagesForMeeting() {
     "./assets/14.png",
   ];
 
+  var element, divForImages;
+  divForImages = document.createElement("div");
   for (var i = 0; i < imagesForMeetings.length; i++) {
-    let divForImages = document.createElement("div");
-    let element = document.createElement("img");
+    element = document.createElement("img");
     element.setAttribute("src", imagesForMeetings[i]);
-
-    divForImages.appendChild(element);
-    divForImages.style.margin = "60px";
-    divForImages.style.padding = "40px";
+    element.setAttribute("class", "mySlides");
     element.style.width = "100%";
     element.style.height = "auto";
     element.style.display = "block";
+    divForImages.style.margin = "60px";
+    divForImages.style.padding = "40px";
+    divForImages.appendChild(element);
     m.appendChild(divForImages);
+  }
+
+  var myIndex = 0;
+  carousel();
+  console.log(element);
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {
+      myIndex = 1;
+    }
+    x[myIndex - 1].style.display = "block";
+    setTimeout(carousel, 3000);
   }
 }
 
