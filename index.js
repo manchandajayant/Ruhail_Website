@@ -12,25 +12,31 @@ window.onload = function () {
     if (running) {
       var i = Math.floor(Math.random() * 3);
       document.body.style.backgroundImage = `url(${images[i]})`;
-      console.log("runnig");
     }
   }
 };
 
-const homePage = document.getElementById("images");
-const workPage = document.getElementById("work-section");
-const aboutPage = document.getElementById("about-section");
-const aboutLink = document.getElementById("about-heading");
-const cvLink = document.getElementById("cv-heading");
-const contactLink = document.getElementById("contact-heading");
-const contactContainer = document.getElementById("contact");
-const aboutContainer = document.getElementById("about-detail-container");
-const cvContainer = document.getElementById("cv");
+var m = document.getElementById("meetings-work");
+var h = document.getElementById("hack-lab-work");
+var p = document.getElementById("pamir-work");
+var c = document.getElementById("cuon-work");
+var t = document.getElementById("tongue-work");
+var i = document.getElementById("ltalam-work");
 
-const anchorTags = document.getElementsByTagName("a");
-const h3Tags = document.getElementsByTagName("h3");
+var homePage = document.getElementById("images");
+var workPage = document.getElementById("work-section");
+var aboutPage = document.getElementById("about-section");
+var aboutLink = document.getElementById("about-heading");
+var cvLink = document.getElementById("cv-heading");
+var contactLink = document.getElementById("contact-heading");
+var contactContainer = document.getElementById("contact");
+var aboutContainer = document.getElementById("about-detail-container");
+var cvContainer = document.getElementById("cv");
 
-const arrForh3 = Array.from(h3Tags);
+var anchorTags = document.getElementsByTagName("a");
+var h3Tags = document.getElementsByTagName("h3");
+
+var arrForh3 = Array.from(h3Tags);
 arrForh3.map((element) => {
   element.style.fontWeight = "900";
 });
@@ -43,9 +49,9 @@ arr.map((element) => {
 });
 
 function collapse(id) {
-  console.log(id);
   const pTags = document.getElementsByClassName("nav")[0].children;
   const arr = Array.from(pTags);
+  const workInfo = document.getElementsByClassName("work-info")[0];
 
   if (id === "work") {
     running = false;
@@ -56,6 +62,12 @@ function collapse(id) {
     arr.forEach((element) => {
       element.style.color = "#000";
     });
+    m.style.display = "none";
+    h.style.display = "none";
+    p.style.display = "none";
+    c.style.display = "none";
+    t.style.display = "none";
+    i.style.display = "none";
   } else if (id === "info") {
     running = false;
     document.body.style.backgroundImage = "none";
@@ -66,6 +78,12 @@ function collapse(id) {
     arr.forEach((element) => {
       element.style.color = "#000";
     });
+    m.style.display = "none";
+    h.style.display = "none";
+    p.style.display = "none";
+    c.style.display = "none";
+    t.style.display = "none";
+    i.style.display = "none";
   } else if (id === "home") {
     document.body.style.backgroundImage = "url(/assets/ruhail-pic.JPG)";
     running = true;
@@ -75,6 +93,12 @@ function collapse(id) {
     arr.forEach((element) => {
       element.style.color = "#fff";
     });
+    m.style.display = "none";
+    h.style.display = "none";
+    p.style.display = "none";
+    c.style.display = "none";
+    t.style.display = "none";
+    i.style.display = "none";
   }
 }
 
@@ -103,7 +127,7 @@ function clickActive(id) {
   }
 }
 
-function workActive() {
+function imagesForMeeting() {
   var imagesForMeetings = [
     "./assets/01.png",
     "./assets/02.png",
@@ -121,14 +145,19 @@ function workActive() {
     "./assets/14.png",
   ];
 
-  const imageSrc = document.getElementsByTagName("img")[2];
+  for (var i = 0; i < imagesForMeetings.length; i++) {
+    let divForImages = document.createElement("div");
+    let element = document.createElement("img");
+    element.setAttribute("src", imagesForMeetings[i]);
 
-  //setInterval(changeImageForMeetings, 9000);
-  var i = 1;
-  // function changeImageForMeetings() {
-  //   imageSrc.setAttribute("src", imagesForMeetings[i]);
-  //   i >= 13 ? (i = 1) : (i = i + 1);
-  // }
+    divForImages.appendChild(element);
+    divForImages.style.margin = "60px";
+    divForImages.style.padding = "40px";
+    element.style.width = "100%";
+    element.style.height = "auto";
+    element.style.display = "block";
+    m.appendChild(divForImages);
+  }
 }
 
 function mouseOverImage(id) {
@@ -149,7 +178,7 @@ function mouseOverImage(id) {
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
   } else if (id === "pamir") {
-    document.body.style.backgroundImage = "url(./assets/pamir1.jpg)";
+    document.body.style.backgroundImage = "url(./assets/pamir2.jpg)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
@@ -179,4 +208,59 @@ function mouseOut() {
   arr.forEach((element) => {
     element.style.color = "#000";
   });
+}
+
+const workSection = document.getElementById("work-section");
+
+function clickWork(id) {
+  if (id === "meetings") {
+    imagesForMeeting();
+    workSection.style.display = "none";
+    m.style.display = "block";
+    h.style.display = "none";
+    p.style.display = "none";
+    c.style.display = "none";
+    t.style.display = "none";
+    i.style.display = "none";
+  } else if (id === "hacklab") {
+    workSection.style.display = "none";
+    m.style.display = "none";
+    h.style.display = "block";
+    p.style.display = "none";
+    c.style.display = "none";
+    t.style.display = "none";
+    i.style.display = "none";
+  } else if (id === "pamir") {
+    workSection.style.display = "none";
+    m.style.display = "none";
+    h.style.display = "none";
+    p.style.display = "block";
+    c.style.display = "none";
+    t.style.display = "none";
+    i.style.display = "none";
+  } else if (id === "cuon") {
+    workSection.style.display = "none";
+    m.style.display = "none";
+    h.style.display = "none";
+    p.style.display = "none";
+    c.style.display = "block";
+    t.style.display = "none";
+    i.style.display = "none";
+  } else if (id === "tongue") {
+    workSection.style.display = "none";
+    m.style.display = "none";
+    h.style.display = "none";
+    p.style.display = "none";
+    c.style.display = "none";
+    t.style.display = "block";
+    i.style.display = "none";
+  } else if (id === "italam") {
+    workSection.style.display = "none";
+    m.style.display = "none";
+    h.style.display = "none";
+    p.style.display = "none";
+    c.style.display = "none";
+    t.style.display = "none";
+    i.style.display = "block";
+  }
 }
