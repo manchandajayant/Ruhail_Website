@@ -23,8 +23,8 @@ var arr = Array.from(anchorTags);
 
 window.onload = function () {
   var images = [
-    "/assets/main-page.jpg",
-    "/assets/ruhail-pic.JPG",
+    "/assets/main-page.webp",
+    "/assets/ruhail-pic.webp",
     "/assets/3rd.jpg",
   ];
 
