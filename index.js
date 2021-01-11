@@ -182,7 +182,7 @@ function imagesForMeeting() {
 
 function imagesForLtalam() {
   var images = [
-    "./assets/ltalam.jpg",
+    "./assets/ltalam.webp",
     "./assets/ltalam2.png",
     "./assets/ltalam3.png",
     "./assets/ltalam5.png",
@@ -257,7 +257,7 @@ function mouseOverImage(id) {
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
   } else if ("ltalam") {
-    document.body.style.backgroundImage = "url(./assets/ltalam.jpg)";
+    document.body.style.backgroundImage = "url(./assets/ltalam.webp)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
