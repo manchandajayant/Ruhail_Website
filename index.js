@@ -85,7 +85,7 @@ function collapse(id) {
     t.style.display = "none";
     l.style.display = "none";
   } else if (id === "home") {
-    document.body.style.backgroundImage = "url(/assets/ruhail-pic.JPG)";
+    document.body.style.backgroundImage = "url(/assets/ruhail-pic.webp)";
     running = true;
     aboutPage.style.display = "none";
     homePage.style.display = "block";
