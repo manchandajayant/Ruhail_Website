@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
-
 html {
   height: 100%;
 }
@@ -30,9 +28,10 @@ body {
   color: #fff;
 }
 .title-name {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 2px;
   color: #000;
-  letter-spacing: 1px;
+  font-size: 25px;
   padding-left: 4px;
   padding-right: 54px;
   cursor: pointer;
@@ -40,14 +39,19 @@ body {
 
 .info-heading {
   padding-right: 4px;
-  font-family: "Open Sans", sans-serif;
+  font-size: 25px;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 2px;
   cursor: pointer;
 }
 
 .work-heading {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 2px;
   cursor: pointer;
   padding-right: 34px;
+
+  font-size: 25px;
 }
 
 .info-heading:hover {
@@ -63,7 +67,8 @@ body {
 }
 
 .about-section {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 2px;
   display: none;
   margin: 30px 50px 30px 50px;
 }
@@ -182,7 +187,8 @@ footer {
 }
 
 .work-heading {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 2px;
 }
 
 .work-info-container {
@@ -191,7 +197,8 @@ footer {
 
 .work-info-1 {
   display: block;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 2px;
 }
 
 .projects {
@@ -245,12 +252,14 @@ footer {
 .heading {
   text-align: center;
   font-weight: bolder;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 2;
 }
 
 .data {
   margin: 10px 40px 0 40px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 2;
 }
 
 .pamir-img {
@@ -270,7 +279,8 @@ footer {
 .hckr-links {
   display: block;
   text-align: center;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 2;
 }
 
 .cuon-img-container {
