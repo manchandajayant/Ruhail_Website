@@ -76,7 +76,8 @@ function collapse(id) {
     running = false;
     document.body.style.backgroundImage = "none";
     homePage.style.display = "none";
-    workPage.style.display = "block";
+    workPage.style.display = "flex";
+    workPage.style.justifyContent = "space-between";
     aboutPage.style.display = "none";
     arr.forEach((element) => {
       element.style.color = "#000";
