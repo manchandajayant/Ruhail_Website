@@ -6,8 +6,8 @@ html {
 body {
   background-image: url("./assets/ruhail-pic.webp");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
   background-position: center;
+  object-fit: cover;
 }
 
 .body {
