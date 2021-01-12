@@ -21,13 +21,32 @@ var h3Tags = document.getElementsByTagName("h3");
 var arrForh3 = Array.from(h3Tags);
 var arr = Array.from(anchorTags);
 
-window.onload = function () {
-  var images = [
-    "/assets/main-page.webp",
-    "/assets/ruhail-pic.webp",
-    "/assets/3rd.jpg",
-  ];
+var images = [
+  "/assets/main-page.webp",
+  "/assets/ruhail-pic.webp",
+  "/assets/3rd.webp",
+];
 
+var imagesForMeetings = [
+  "./assets/01.webp",
+  "./assets/02.webp",
+  "./assets/03.webp",
+  "./assets/04.webp",
+  "./assets/05.webp",
+  "./assets/06.webp",
+  "./assets/07.webp",
+  "./assets/08.webp",
+  "./assets/09.webp",
+  "./assets/10.webp",
+  "./assets/11.webp",
+  "./assets/12.webp",
+  "./assets/13.webp",
+  "./assets/14.webp",
+  "./assets/15.webp",
+  "./assests/16.webp",
+];
+
+window.onload = function () {
   setInterval(changeImage, 7000);
 
   function changeImage() {
@@ -128,25 +147,6 @@ function clickActive(id) {
 }
 
 function imagesForMeeting() {
-  var imagesForMeetings = [
-    "./assets/01.png",
-    "./assets/02.png",
-    "./assets/03.png",
-    "./assets/04.png",
-    "./assets/05.png",
-    "./assets/06.png",
-    "./assets/07.png",
-    "./assets/08.png",
-    "./assets/09.png",
-    "./assets/10.png",
-    "./assets/11.png",
-    "./assets/12.png",
-    "./assets/13.png",
-    "./assets/14.png",
-    "./assets/15.png",
-    "./assests/16.png",
-  ];
-
   var element, divForImages;
   divForImages = document.createElement("div");
   for (var i = 0; i < imagesForMeetings.length; i++) {
@@ -183,10 +183,10 @@ function imagesForMeeting() {
 function imagesForLtalam() {
   var images = [
     "./assets/ltalam.webp",
-    "./assets/ltalam2.png",
-    "./assets/ltalam3.png",
-    "./assets/ltalam5.png",
-    "./assets/ltalam5.png",
+    "./assets/ltalam2.webp",
+    "./assets/ltalam3.webp",
+    "./assets/ltalam5.webp",
+    "./assets/ltalam5.webp",
   ];
 
   var elementImage, divForImagesinLtalam;
@@ -232,27 +232,27 @@ function mouseOverImage(id) {
     element.style.color = "#fff";
   });
   if (id === "meetings") {
-    document.body.style.backgroundImage = "url(./assets/16.png)";
+    document.body.style.backgroundImage = "url(./assets/16.webp)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
   } else if (id === "hacklab") {
-    document.body.style.backgroundImage = "url(./assets/ctm.jpg)";
+    document.body.style.backgroundImage = "url(./assets/ctm.webp)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
   } else if (id === "pamir") {
-    document.body.style.backgroundImage = "url(./assets/pamir2.jpg)";
+    document.body.style.backgroundImage = "url(./assets/pamir2.webp)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
   } else if (id === "cuon") {
-    document.body.style.backgroundImage = "url(./assets/cuon.jpg)";
+    document.body.style.backgroundImage = "url(./assets/cuon.webp)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
   } else if (id === "tongue") {
-    document.body.style.backgroundImage = "url(./assets/tongue.jpg)";
+    document.body.style.backgroundImage = "url(./assets/tongue.webp)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
