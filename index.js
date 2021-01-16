@@ -22,28 +22,28 @@ var arrForh3 = Array.from(h3Tags);
 var arr = Array.from(anchorTags);
 
 var images = [
-  "/assets/main-page.webp",
-  "/assets/ruhail-pic.webp",
-  "/assets/3rd.webp",
+  "https://res.cloudinary.com/manjay/image/upload/v1610779244/main-page_wo0kzn.webp",
+  "https://res.cloudinary.com/manjay/image/upload/v1610779252/ruhail-pic_spbhli.webp",
+  "https://res.cloudinary.com/manjay/image/upload/v1610779244/3rd_vq90es.webp",
 ];
 
 var imagesForMeetings = [
-  "./assets/01.webp",
-  "./assets/02.webp",
-  "./assets/03.webp",
-  "./assets/04.webp",
-  "./assets/05.webp",
-  "./assets/06.webp",
-  "./assets/07.webp",
-  "./assets/08.webp",
-  "./assets/09.webp",
-  "./assets/10.webp",
-  "./assets/11.webp",
-  "./assets/12.webp",
-  "./assets/13.webp",
-  "./assets/14.webp",
-  "./assets/15.webp",
-  "./assests/16.webp",
+  "https://res.cloudinary.com/manjay/image/upload/v1610779241/01_l4lzsw.webp",
+  "https://res.cloudinary.com/manjay/image/upload/v1610779234/02_tc5gpm.webp",
+  "https://res.cloudinary.com/manjay/image/upload/v1610779233/03_rigefs.webp",
+  "https://res.cloudinary.com/manjay/image/upload/v1610779239/04_hxfkst.webp",
+  "https://res.cloudinary.com/manjay/image/upload/v1610779237/05_izsn6e.webp",
+  "https://res.cloudinary.com/manjay/image/upload/v1610779240/06_tuxrqu.webp",
+  "https://res.cloudinary.com/manjay/image/upload/v1610779240/07_suboui.webp",
+  "https://res.cloudinary.com/manjay/image/upload/v1610779238/08_fiukrq.webp",
+  "https://res.cloudinary.com/manjay/image/upload/v1610779237/09_uyf2of.webp",
+  "https://res.cloudinary.com/manjay/image/upload/v1610779241/10_lxnw7s.webp",
+  "https://res.cloudinary.com/manjay/image/upload/v1610779239/11_spzvnv.webp",
+  "https://res.cloudinary.com/manjay/image/upload/v1610779237/12_lhghiv.webp",
+  "https://res.cloudinary.com/manjay/image/upload/v1610779249/13_zeabkh.webp",
+  "https://res.cloudinary.com/manjay/image/upload/v1610779236/14_ig8ruy.webp",
+  "https://res.cloudinary.com/manjay/image/upload/v1610779233/15_qmsuez.webp",
+  "https://res.cloudinary.com/manjay/image/upload/v1610779245/16_ifynb7.webp",
 ];
 
 window.onload = function () {
@@ -105,7 +105,8 @@ function collapse(id) {
     t.style.display = "none";
     l.style.display = "none";
   } else if (id === "home") {
-    document.body.style.backgroundImage = "url(/assets/ruhail-pic.webp)";
+    document.body.style.backgroundImage =
+      "url(https://res.cloudinary.com/manjay/image/upload/v1610779252/ruhail-pic_spbhli.webp)";
     running = true;
     aboutPage.style.display = "none";
     homePage.style.display = "block";
@@ -183,11 +184,10 @@ function imagesForMeeting() {
 
 function imagesForLtalam() {
   var images = [
-    "./assets/ltalam.webp",
-    "./assets/ltalam2.webp",
-    "./assets/ltalam3.webp",
-    "./assets/ltalam5.webp",
-    "./assets/ltalam5.webp",
+    "https://res.cloudinary.com/manjay/image/upload/v1610779242/ltalam_wv62mw.webp",
+    "https://res.cloudinary.com/manjay/image/upload/v1610779243/ltalam2_flgnfb.webp",
+    "https://res.cloudinary.com/manjay/image/upload/v1610779243/ltalam3_hngsaq.webp",
+    "https://res.cloudinary.com/manjay/image/upload/v1610779240/ltalam4_q2eaqj.webp",
   ];
 
   var elementImage, divForImagesinLtalam;
@@ -233,32 +233,38 @@ function mouseOverImage(id) {
     element.style.color = "#fff";
   });
   if (id === "meetings") {
-    document.body.style.backgroundImage = "url(./assets/16.webp)";
+    document.body.style.backgroundImage =
+      "url(https://res.cloudinary.com/manjay/image/upload/v1610779245/16_ifynb7.webp)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
   } else if (id === "hacklab") {
-    document.body.style.backgroundImage = "url(./assets/ctm.webp)";
+    document.body.style.backgroundImage =
+      "url(https://res.cloudinary.com/manjay/image/upload/v1610779236/ctm_h6hh4l.webp)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
   } else if (id === "pamir") {
-    document.body.style.backgroundImage = "url(./assets/pamir2.webp)";
+    document.body.style.backgroundImage =
+      "url(https://res.cloudinary.com/manjay/image/upload/v1610779261/pamir2.webp)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
   } else if (id === "cuon") {
-    document.body.style.backgroundImage = "url(./assets/cuon.webp)";
+    document.body.style.backgroundImage =
+      "url(https://res.cloudinary.com/manjay/image/upload/v1610779235/cuon_g2xau5.webp)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
   } else if (id === "tongue") {
-    document.body.style.backgroundImage = "url(./assets/tongue.webp)";
+    document.body.style.backgroundImage =
+      "url(https://res.cloudinary.com/manjay/image/upload/v1610779235/tongue_squaw8.webp)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
   } else if ("ltalam") {
-    document.body.style.backgroundImage = "url(./assets/ltalam.webp)";
+    document.body.style.backgroundImage =
+      "url(https://res.cloudinary.com/manjay/image/upload/v1610779242/ltalam_wv62mw.webp)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
