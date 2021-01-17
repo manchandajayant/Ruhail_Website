@@ -1,10 +1,18 @@
 var running = true;
-var m = document.getElementById("meetings-work");
-var h = document.getElementById("hack-lab-work");
-var p = document.getElementById("pamir-work");
-var c = document.getElementById("cuon-work");
-var t = document.getElementById("tongue-work");
-var l = document.getElementById("ltalam-work");
+var meetingsWork = document.getElementById("meetings-work");
+var hackLabWork = document.getElementById("hack-lab-work");
+var pamirWork = document.getElementById("pamir-work");
+var cuonWork = document.getElementById("cuon-work");
+var tongueWork = document.getElementById("tongue-work");
+var ltalamWork = document.getElementById("ltalam-work");
+
+var workArray = [];
+workArray.push(meetingsWork);
+workArray.push(hackLabWork);
+workArray.push(pamirWork);
+workArray.push(cuonWork);
+workArray.push(tongueWork);
+workArray.push(ltalamWork);
 
 var homePage = document.getElementById("images");
 var workPage = document.getElementById("work-section");
@@ -20,6 +28,39 @@ var anchorTags = document.getElementsByTagName("a");
 var h3Tags = document.getElementsByTagName("h3");
 var arrForh3 = Array.from(h3Tags);
 var arr = Array.from(anchorTags);
+
+var arrayForID = [
+  {
+    url:
+      "https://res.cloudinary.com/manjay/image/upload/v1610779245/16_ifynb7.webp",
+    id: "meetings",
+  },
+  {
+    url:
+      "https://res.cloudinary.com/manjay/image/upload/v1610779236/ctm_h6hh4l.webp",
+    id: "hack-lab",
+  },
+  {
+    url:
+      "https://res.cloudinary.com/manjay/image/upload/v1610779261/pamir2.webp",
+    id: "pamir",
+  },
+  {
+    url:
+      "https://res.cloudinary.com/manjay/image/upload/v1610779235/cuon_g2xau5.webp",
+    id: "cuon",
+  },
+  {
+    url:
+      "https://res.cloudinary.com/manjay/image/upload/v1610779235/tongue_squaw8.webp",
+    id: "tongue",
+  },
+  {
+    url:
+      "https://res.cloudinary.com/manjay/image/upload/v1610779242/ltalam_wv62mw.webp",
+    id: "ltalam",
+  },
+];
 
 var images = [
   "https://res.cloudinary.com/manjay/image/upload/v1610779244/main-page_wo0kzn.webp",
@@ -48,7 +89,6 @@ var imagesForMeetings = [
 
 window.onload = function () {
   setInterval(changeImage, 7000);
-
   function changeImage() {
     if (running) {
       var i = Math.floor(Math.random() * 3);
@@ -82,12 +122,9 @@ function collapse(id) {
     arr.forEach((element) => {
       element.style.color = "#000";
     });
-    m.style.display = "none";
-    h.style.display = "none";
-    p.style.display = "none";
-    c.style.display = "none";
-    t.style.display = "none";
-    l.style.display = "none";
+    workArray.forEach((element) => {
+      element.style.display = "none";
+    });
   } else if (id === "info") {
     running = false;
     document.body.style.backgroundImage = "none";
@@ -98,12 +135,10 @@ function collapse(id) {
     arr.forEach((element) => {
       element.style.color = "#000";
     });
-    m.style.display = "none";
-    h.style.display = "none";
-    p.style.display = "none";
-    c.style.display = "none";
-    t.style.display = "none";
-    l.style.display = "none";
+
+    workArray.forEach((element) => {
+      element.style.display = "none";
+    });
   } else if (id === "home") {
     document.body.style.backgroundImage =
       "url(https://res.cloudinary.com/manjay/image/upload/v1610779252/ruhail-pic_spbhli.webp)";
@@ -111,19 +146,19 @@ function collapse(id) {
     aboutPage.style.display = "none";
     homePage.style.display = "block";
     workPage.style.display = "none";
+
     arr.forEach((element) => {
       element.style.color = "#fff";
     });
-    m.style.display = "none";
-    h.style.display = "none";
-    p.style.display = "none";
-    c.style.display = "none";
-    t.style.display = "none";
-    l.style.display = "none";
+
+    workArray.forEach((element) => {
+      element.style.display = "none";
+    });
   }
 }
 
 function clickActive(id) {
+  console.log(id, aboutContainer);
   if (id === "about-heading") {
     cvContainer.style.display = "none";
     aboutContainer.style.display = "block";
@@ -155,13 +190,14 @@ function imagesForMeeting() {
     element = document.createElement("img");
     element.setAttribute("src", imagesForMeetings[i]);
     element.setAttribute("class", "mySlides");
+    element.setAttribute("alt", "ruhail-qaisar");
     element.style.width = "100%";
     element.style.height = "auto";
     element.style.display = "block";
     divForImages.style.margin = "0 60px 0 60px";
     divForImages.style.padding = "40px";
     divForImages.appendChild(element);
-    m.appendChild(divForImages);
+    meetingsWork.appendChild(divForImages);
   }
 
   var myIndex = 0;
@@ -197,6 +233,7 @@ function imagesForLtalam() {
     elementImage = document.createElement("img");
     elementImage.setAttribute("src", images[i]);
     elementImage.setAttribute("class", "mySlidesInLtalam");
+    element.setAttribute("alt", "ruhail-qaisar");
     elementImage.style.width = "100%";
     elementImage.style.height = "auto";
     elementImage.style.display = "block";
@@ -204,12 +241,12 @@ function imagesForLtalam() {
     divForImagesinLtalam.style.padding = "40px";
     divForImagesinLtalam.appendChild(elementImage);
 
-    l.appendChild(divForImagesinLtalam);
+    ltalamWork.appendChild(divForImagesinLtalam);
   }
 
   var myIndex = 0;
   carousel();
-  console.log(elementImage);
+
   function carousel() {
     var i;
     var x = document.getElementsByClassName("mySlidesInLtalam");
@@ -227,48 +264,25 @@ function imagesForLtalam() {
 
 function mouseOverImage(id) {
   const work = document.getElementsByClassName("links-to-work");
-
+  console.log(typeof id);
   const arr = Array.from(work);
   arr.forEach((element) => {
     element.style.color = "#fff";
   });
-  if (id === "meetings") {
-    document.body.style.backgroundImage =
-      "url(https://res.cloudinary.com/manjay/image/upload/v1610779245/16_ifynb7.webp)";
-    document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundPosition = "center";
-    document.body.style.backgroundSize = "cover";
-  } else if (id === "hacklab") {
-    document.body.style.backgroundImage =
-      "url(https://res.cloudinary.com/manjay/image/upload/v1610779236/ctm_h6hh4l.webp)";
-    document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundPosition = "center";
-    document.body.style.backgroundSize = "cover";
-  } else if (id === "pamir") {
-    document.body.style.backgroundImage =
-      "url(https://res.cloudinary.com/manjay/image/upload/v1610779261/pamir2.webp)";
-    document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundPosition = "center";
-    document.body.style.backgroundSize = "cover";
-  } else if (id === "cuon") {
-    document.body.style.backgroundImage =
-      "url(https://res.cloudinary.com/manjay/image/upload/v1610779235/cuon_g2xau5.webp)";
-    document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundPosition = "center";
-    document.body.style.backgroundSize = "cover";
-  } else if (id === "tongue") {
-    document.body.style.backgroundImage =
-      "url(https://res.cloudinary.com/manjay/image/upload/v1610779235/tongue_squaw8.webp)";
-    document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundPosition = "center";
-    document.body.style.backgroundSize = "cover";
-  } else if ("ltalam") {
-    document.body.style.backgroundImage =
-      "url(https://res.cloudinary.com/manjay/image/upload/v1610779242/ltalam_wv62mw.webp)";
-    document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundPosition = "center";
-    document.body.style.backgroundSize = "cover";
+
+  for (var i = 0; i < arrayForID.length; i++) {
+    if (id === arrayForID[i].id) {
+      setImageOnHover(arrayForID[i].url);
+    }
   }
+}
+
+function setImageOnHover(url) {
+  console.log(url);
+  document.body.style.backgroundImage = `url(${url})`;
+  document.body.style.backgroundRepeat = "no-repeat";
+  document.body.style.backgroundPosition = "center";
+  document.body.style.backgroundSize = "cover";
 }
 
 function mouseOut() {
@@ -284,56 +298,28 @@ function mouseOut() {
 const workSection = document.getElementById("work-section");
 
 function clickWork(id) {
-  console.log(id);
   if (id === "meetings") {
     imagesForMeeting();
-    workSection.style.display = "none";
-    m.style.display = "block";
-    h.style.display = "none";
-    p.style.display = "none";
-    c.style.display = "none";
-    t.style.display = "none";
-    l.style.display = "none";
-  } else if (id === "hacklab") {
-    workSection.style.display = "none";
-    m.style.display = "none";
-    h.style.display = "block";
-    p.style.display = "none";
-    c.style.display = "none";
-    t.style.display = "none";
-    l.style.display = "none";
+    workDisplay("meetings");
+  } else if (id === "hack-lab") {
+    workDisplay("hack-lab");
   } else if (id === "pamir") {
-    workSection.style.display = "none";
-    m.style.display = "none";
-    h.style.display = "none";
-    p.style.display = "block";
-    c.style.display = "none";
-    t.style.display = "none";
-    l.style.display = "none";
+    workDisplay("pamir");
   } else if (id === "cuon") {
-    workSection.style.display = "none";
-    m.style.display = "none";
-    h.style.display = "none";
-    p.style.display = "none";
-    c.style.display = "block";
-    t.style.display = "none";
-    l.style.display = "none";
+    workDisplay("cuon");
   } else if (id === "tongue") {
-    workSection.style.display = "none";
-    m.style.display = "none";
-    h.style.display = "none";
-    p.style.display = "none";
-    c.style.display = "none";
-    t.style.display = "block";
-    l.style.display = "none";
+    workDisplay("tongue");
   } else if (id === "ltalam") {
     imagesForLtalam();
-    workSection.style.display = "none";
-    m.style.display = "none";
-    h.style.display = "none";
-    p.style.display = "none";
-    c.style.display = "none";
-    t.style.display = "none";
-    l.style.display = "block";
+    workDisplay("ltalam");
+  }
+}
+
+function workDisplay(arg) {
+  workSection.style.display = "none";
+  for (var i = 0; i < workArray.length; i++) {
+    workArray[i].className === arg
+      ? (workArray[i].style.display = "block")
+      : (workArray[i].style.display = "none");
   }
 }
